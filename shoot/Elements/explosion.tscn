@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpnn720n6cyaj"]
+
+[ext_resource type="Texture2D" uid="uid://cwbuhour12fbo" path="res://Sprites/kenney_space-shooter-redux/PNG/Meteors/meteorGrey_big1.png" id="1_62fih"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_27ccc"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = -720.0
+angle_max = 720.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = -1.60933e-05
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = 637.93
+gravity = Vector3(0, 98, 0)
+
+[node name="Explosion" type="GPUParticles2D"]
+texture = ExtResource("1_62fih")
+process_material = SubResource("ParticleProcessMaterial_27ccc")

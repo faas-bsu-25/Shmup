@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dybs4fpbr77gd"]
+
+[ext_resource type="Texture2D" uid="uid://b4hs31ohqkkcg" path="res://Sprites/blue.png" id="1_qdkto"]
+
+[node name="BG" type="Node2D"]
+
+[node name="Blue" type="Sprite2D" parent="."]
+position = Vector2(571, 321)
+scale = Vector2(4.42969, 2.53125)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue2" type="Sprite2D" parent="."]
+position = Vector2(1707, 329)
+scale = Vector2(4.42969, 2.53125)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue3" type="Sprite2D" parent="."]
+position = Vector2(571, 975)
+scale = Vector2(4.42969, 2.53125)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true
+
+[node name="Blue4" type="Sprite2D" parent="."]
+position = Vector2(1718, 979)
+scale = Vector2(4.42969, 2.53125)
+texture = ExtResource("1_qdkto")
+metadata/_edit_lock_ = true

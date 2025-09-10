@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://dtfpdi3rxmdgj"]
+
+[ext_resource type="PackedScene" uid="uid://dybs4fpbr77gd" path="res://Elements/bg.tscn" id="1_otwqh"]
+[ext_resource type="Script" uid="uid://1m2eanfwm6n6" path="res://Scripts/shmup.gd" id="1_slp7o"]
+[ext_resource type="PackedScene" uid="uid://dxmh6t0ts7538" path="res://Elements/player_ship.tscn" id="2_mqevr"]
+[ext_resource type="PackedScene" uid="uid://d0yr2plvclgaw" path="res://Elements/laser.tscn" id="3_em5ob"]
+[ext_resource type="PackedScene" uid="uid://u2jan3381k27" path="res://Scripts/enemy_spawner.tscn" id="4_mqevr"]
+[ext_resource type="Script" uid="uid://cdjn6gorhlu3m" path="res://Scripts/label.gd" id="6_uqydh"]
+[ext_resource type="AudioStream" uid="uid://ca37xvtvckfu7" path="res://Sounds/explosion.wav" id="7_uqydh"]
+
+[node name="Shmup" type="Node2D" node_paths=PackedStringArray("txtscore")]
+position = Vector2(-57, -29)
+script = ExtResource("1_slp7o")
+txtscore = NodePath("Label")
+
+[node name="BG" parent="." instance=ExtResource("1_otwqh")]
+position = Vector2(127, 25)
+
+[node name="PlayerShip" parent="." instance=ExtResource("2_mqevr")]
+position = Vector2(1215, 483)
+bullet_element = ExtResource("3_em5ob")
+
+[node name="EnemySpawner" parent="." instance=ExtResource("4_mqevr")]
+wait_time = 2.5
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2136.0
+offset_top = 44.0
+offset_right = 2363.0
+offset_bottom = 193.0
+text = "0"
+script = ExtResource("6_uqydh")
+
+[node name="SFXExplosion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_uqydh")
+
+[connection signal="timeout" from="EnemySpawner" to="EnemySpawner" method="_on_timeout"]
