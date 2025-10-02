@@ -7,7 +7,6 @@
 size = Vector2(64, 80.5)
 
 [node name="Laser" type="RigidBody2D"]
-position = Vector2(1215, 483)
 collision_layer = 2
 collision_mask = 2
 gravity_scale = 0.0
@@ -17,11 +16,9 @@ script = ExtResource("1_6vqwg")
 shoot_speed = 750
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(176, -21)
 shape = SubResource("RectangleShape2D_uqydh")
 
 [node name="LaserBlue11" type="Sprite2D" parent="."]
-position = Vector2(179, -18)
 scale = Vector2(1, 1.68919)
 texture = ExtResource("2_g6b45")
 

@@ -9,7 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://ca37xvtvckfu7" path="res://Sounds/explosion.wav" id="7_uqydh"]
 
 [node name="Shmup" type="Node2D" node_paths=PackedStringArray("txtscore")]
-position = Vector2(-57, -29)
 script = ExtResource("1_slp7o")
 txtscore = NodePath("Label")
 
